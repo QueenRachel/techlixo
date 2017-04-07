@@ -23,19 +23,25 @@
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
+                <li>
+                    <%= link_to 'Empresas', businesses_path %>
+                </li>
                 <% if user_signed_in? %>
                   <li>
-                      <%= link_to 'Meu perfil', edit_user_registration_path, class: 'page-scroll' %>
+                      <%= link_to 'Minhas Empresas', my_businesses_path %>
                   </li>
                   <li>
-                      <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'page-scroll' %>
+                      <%= link_to 'Meu perfil', edit_user_registration_path %>
+                  </li>
+                  <li>
+                      <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
                   </li>
                 <% else %>
                   <li>
-                      <%= link_to 'Cadastre-se', new_user_registration_path, class: 'page-scroll' %>
+                      <%= link_to 'Cadastre-se', new_user_registration_path %>
                   </li>
                   <li>
-                      <%= link_to 'Login', new_user_session_path, class: 'page-scroll' %>
+                      <%= link_to 'Login', new_user_session_path %>
                   </li>
                 <% end %>
             </ul>

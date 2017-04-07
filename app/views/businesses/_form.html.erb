@@ -1,0 +1,73 @@
+<%= form_for(@business) do |f| %>
+  <% if @business.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@business.errors.count, "error") %> prohibited this business from being saved:</h2>
+
+      <ul>
+      <% @business.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fantasy_name %><br>
+    <%= f.text_field :fantasy_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cnpj %><br>
+    <%= f.text_field :cnpj %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br>
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :address_street %><br>
+    <%= f.text_field :address_street %>
+  </div>
+  <div class="field">
+    <%= f.label :address_number %><br>
+    <%= f.text_field :address_number %>
+  </div>
+  <div class="field">
+    <%= f.label :address_complement %><br>
+    <%= f.text_field :address_complement %>
+  </div>
+  <div class="field">
+    <%= f.label :address_neighborhood %><br>
+    <%= f.text_field :address_neighborhood %>
+  </div>
+  <div class="field">
+    <%= f.label :address_city %><br>
+    <%= f.text_field :address_city %>
+  </div>
+  <div class="field">
+    <%= f.label :address_state %><br>
+    <%= f.text_field :address_state %>
+  </div>
+  <div class="field">
+    <%= f.label :address_zipcode %><br>
+    <%= f.text_field :address_zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br>
+    <%= f.text_area :observation %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Cadastrar Empresa' %>
+  </div>
+<% end %>

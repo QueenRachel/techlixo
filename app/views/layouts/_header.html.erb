@@ -23,6 +23,21 @@
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
+                <% if user_signed_in? %>
+                  <li>
+                      <%= link_to 'Meu perfil', edit_user_registration_path, class: 'page-scroll' %>
+                  </li>
+                  <li>
+                      <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'page-scroll' %>
+                  </li>
+                <% else %>
+                  <li>
+                      <%= link_to 'Cadastre-se', new_user_registration_path, class: 'page-scroll' %>
+                  </li>
+                  <li>
+                      <%= link_to 'Login', new_user_session_path, class: 'page-scroll' %>
+                  </li>
+                <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

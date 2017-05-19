@@ -1,0 +1,19 @@
+.panel {
+  max-width: 430px;
+  margin: 40px auto 240px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #2e8b57;
+  padding: 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.panel .btn-green {
+  width: 100%;
+  color: white;
+  background-color: #2e8b57 !important;
+}
+
+.panel .btn-green:hover {
+  background-color: #2e8b57 !important;
+}

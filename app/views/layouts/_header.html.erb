@@ -12,16 +12,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <%= link_to 'Sobre', root_path(anchor: 'about') %>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <%= link_to 'Serviços', root_path(anchor: 'services') %>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    <%= link_to 'Portfolio', root_path(anchor: 'portfolio') %>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <%= link_to 'Contato', root_path(anchor: 'contact') %>
                 </li>
                 <li>
                     <%= link_to 'Empresas', businesses_path %>

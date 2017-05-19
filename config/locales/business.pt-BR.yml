@@ -1,0 +1,22 @@
+'pt-BR':
+  activerecord:
+    models:
+      business:
+        one: 'Empresa'
+        other: 'Empresas'
+    attributes:
+      business:
+        fantasy_name: 'Nome Fantasia'
+        cnpj: 'CNPJ'
+        email: 'Email'
+        telephone: 'Telefone'
+        address_street: 'Logradouro'
+        address_number: 'Número'
+        address_complement: 'Complemento'
+        address_neighborhood: 'Bairro'
+        address_city: 'Cidade'
+        address_state: 'Estado'
+        address_zipcode: 'CEP'
+        company_name: 'Razão Social'
+        website: 'Site'
+        observation: 'Observações'

@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
+# Translate all Rails files to pt-BR
+gem 'rails-i18n', '~> 4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -22,6 +24,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-sass', '~> 4.7.0'
 # Devise serve para autenticação de usuários
 gem 'devise', '~> 4.2.1'
+gem 'devise-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

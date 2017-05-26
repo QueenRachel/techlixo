@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # Rotas das Empresas
   resources :businesses
   get 'minhas_empresas', to: 'businesses#my_businesses', as: :my_businesses
+
+  # Action create que irá receber o POST com os dados
+  resource :contact, only: :create
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

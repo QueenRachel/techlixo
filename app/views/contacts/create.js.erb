@@ -1,0 +1,6 @@
+// Note que o @contact é uma variável de instância, e por isso ela pode
+// ser acessada dentro de um arquivo JS que contenha a extensão .erb
+// e que está sendo executada pelo `render :create`
+$(".js-contact-form-wrapper").html(
+  $("<%= escape_javascript(render partial: 'contacts/form', locals: { contact: @contact }) %>")
+);

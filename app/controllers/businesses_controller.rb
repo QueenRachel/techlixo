@@ -14,6 +14,7 @@ class BusinessesController < ApplicationController
 
   # GET /businesses/1
   def show
+    @contact = Contact.new
     @business = Business.find(params[:id])
   end
 

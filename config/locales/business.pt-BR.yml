@@ -10,7 +10,7 @@
         cnpj: 'CNPJ'
         email: 'Email'
         telephone: 'Telefone'
-        address_street: 'Logradouro'
+        address_street: 'Rua'
         address_number: 'Número'
         address_complement: 'Complemento'
         address_neighborhood: 'Bairro'

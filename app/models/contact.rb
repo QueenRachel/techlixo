@@ -5,7 +5,7 @@ class Contact
 
   attr_accessor :name, :email, :subject, :body, :photo, :business_id
 
-  validates :name, :email, :subject, :body, presence: true
+  validates :name, :email, :body, presence: true
 
   # Validar o formato do email com o Regex abaixo
   validates_format_of :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/,

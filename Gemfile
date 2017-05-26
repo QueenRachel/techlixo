@@ -25,6 +25,8 @@ gem 'font-awesome-sass', '~> 4.7.0'
 # Devise serve para autenticação de usuários
 gem 'devise', '~> 4.2.1'
 gem 'devise-i18n'
+# SimpleForm é uma maneira facilitada de criar forms no Rails
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

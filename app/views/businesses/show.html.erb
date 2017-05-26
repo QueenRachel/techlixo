@@ -1,73 +1,81 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Fantasy name:</strong>
-  <%= @business.fantasy_name %>
-</p>
-
-<p>
-  <strong>Cnpj:</strong>
-  <%= @business.cnpj %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @business.email %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @business.telephone %>
-</p>
-
-<p>
-  <strong>Address street:</strong>
-  <%= @business.address_street %>
-</p>
-
-<p>
-  <strong>Address number:</strong>
-  <%= @business.address_number %>
-</p>
-
-<p>
-  <strong>Address complement:</strong>
-  <%= @business.address_complement %>
-</p>
-
-<p>
-  <strong>Address neighborhood:</strong>
-  <%= @business.address_neighborhood %>
-</p>
-
-<p>
-  <strong>Address city:</strong>
-  <%= @business.address_city %>
-</p>
-
-<p>
-  <strong>Address state:</strong>
-  <%= @business.address_state %>
-</p>
-
-<p>
-  <strong>Address zipcode:</strong>
-  <%= @business.address_zipcode %>
-</p>
-
-<p>
-  <strong>Company name:</strong>
-  <%= @business.company_name %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @business.website %>
-</p>
-
-<p>
-  <strong>Observation:</strong>
-  <%= @business.observation %>
-</p>
-
-<%= link_to 'Back', :back %>
+<div class="container" style="margin-top: 80px;">
+  <div class="row">
+    <div class="col-xs-8 panel-business">
+      <div class="row">
+        <h1 class="text-center">
+            <%= @business.fantasy_name %>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <strong>Razão Social:</strong>
+          <%= @business.company_name %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>CNPJ:</strong>
+          <%= @business.cnpj %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>Site:</strong>
+          <%= @business.website %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <strong>Email:</strong>
+          <%= @business.email %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>Telefone:</strong>
+          <%= @business.telephone %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>Rua:</strong>
+          <%= @business.address_street %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <strong>Número:</strong>
+          <%= @business.address_number %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>Complemento:</strong>
+          <%= @business.address_complement %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>Bairro:</strong>
+          <%= @business.address_neighborhood %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <strong>Cidade:</strong>
+          <%= @business.address_city %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>Estado:</strong>
+          <%= @business.address_state %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <strong>CEP:</strong>
+          <%= @business.address_zipcode %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <strong>Observação:</strong>
+          <%= @business.observation %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to 'Voltar', :back %>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4 panel-business">
+      <h2>form</h2>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@
   <div class="form-group">
     <%= f.input :business_id, as: :hidden, input_html: {value: f.object.business_id || params[:id]} %>
     <%= f.input :name, required: false, label: 'Qual seu nome?', placeholder: 'Nome Completo', input_html: {class: 'form-control'} %>
-    <%= f.input :email, required: false, label: 'Qual seu email?', placeholder: 'nome@example.com', input_html: {class: 'form-control'} %>
+    <%= f.input :email, required: false, label: 'Qual seu email?', placeholder: 'nome@exemplo.com', input_html: {class: 'form-control'} %>
     <%= f.input :body, as: :text, required: false, label: 'Mensagem', placeholder: 'Fale mais sobre o lixo que será recolhido e qual o melhor dia para a coleta ser efetuada!', input_html: {class: 'form-control', rows: '4'} %>
     <%= f.input :photo, as: :file, required: false, label: 'Imagem da sucata', input_html: {class: 'form-control'} %>
     <%= f.button :submit, 'Enviar', title: 'Enviar', data: { disable_with: 'Enviando...' }, class: 'btn btn-green btn-lg' %>

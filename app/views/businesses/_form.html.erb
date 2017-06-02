@@ -11,63 +11,111 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :fantasy_name %><br>
-    <%= f.text_field :fantasy_name %>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :fantasy_name %><br>
+        <%= f.text_field :fantasy_name, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :cnpj %><br>
+        <%= f.text_field :cnpj, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :email %><br>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :telephone %><br>
+        <%= f.text_field :telephone, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :address_street %><br>
+        <%= f.text_field :address_street, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <div class="form-group">
+        <%= f.label :address_number %><br>
+        <%= f.text_field :address_number, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :address_neighborhood %><br>
+        <%= f.text_field :address_neighborhood, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :address_complement %><br>
+        <%= f.text_field :address_complement, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :address_city %><br>
+        <%= f.text_field :address_city, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :address_state %><br>
+        <%= f.text_field :address_state, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :address_zipcode %><br>
+        <%= f.text_field :address_zipcode, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :company_name %><br>
+        <%= f.text_field :company_name, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :website %><br>
+        <%= f.text_field :website, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <div class="form-group">
+          <%= f.label :observation %><br>
+          <%= f.text_area :observation, class: 'form-control', rows: 4, placeholder: 'Horário de funcionamento, etc.' %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :cnpj %><br>
-    <%= f.text_field :cnpj %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :telephone %><br>
-    <%= f.text_field :telephone %>
-  </div>
-  <div class="field">
-    <%= f.label :address_street %><br>
-    <%= f.text_field :address_street %>
-  </div>
-  <div class="field">
-    <%= f.label :address_number %><br>
-    <%= f.text_field :address_number %>
-  </div>
-  <div class="field">
-    <%= f.label :address_complement %><br>
-    <%= f.text_field :address_complement %>
-  </div>
-  <div class="field">
-    <%= f.label :address_neighborhood %><br>
-    <%= f.text_field :address_neighborhood %>
-  </div>
-  <div class="field">
-    <%= f.label :address_city %><br>
-    <%= f.text_field :address_city %>
-  </div>
-  <div class="field">
-    <%= f.label :address_state %><br>
-    <%= f.text_field :address_state %>
-  </div>
-  <div class="field">
-    <%= f.label :address_zipcode %><br>
-    <%= f.text_field :address_zipcode %>
-  </div>
-  <div class="field">
-    <%= f.label :company_name %><br>
-    <%= f.text_field :company_name %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br>
-    <%= f.text_field :website %>
-  </div>
-  <div class="field">
-    <%= f.label :observation %><br>
-    <%= f.text_area :observation %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Cadastrar Empresa' %>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="actions">
+        <%= f.submit 'Salvar', class: 'btn btn-green' %>
+      </div>
+    </div>
   </div>
 <% end %>

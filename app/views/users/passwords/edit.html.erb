@@ -1,4 +1,31 @@
-<h2>Change your password</h2>
+<div class="container" style="margin-top: 80px;">
+  <h1 class="text-center">Alterar sua senha</h1>
+  <div class="panel">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :reset_password_token %>
+      <div class="form-group">
+        <%= f.label :password, "Nova senha" %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> caracteres mínimos)</em><br />
+        <% end %>
+        <%= f.password_field :password, autofocus: true, autocomplete: "off", class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation, "Confirmar nova senha" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Alterar minha senha", class: 'btn btn-green' %>
+      </div>
+      <div class="text-center">
+        <%= render "users/shared/links" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- <h2>Change your password</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -22,4 +49,4 @@
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<%= render "users/shared/links" %> -->

@@ -22,6 +22,7 @@ puts "========> Criando empresas básicas"
   b = Business.new(
     fantasy_name: "Empresa #{index}",
     cnpj: "43514896777138",
+    email: "business_#{index}@example.com",
     telephone: "51872663947",
     address_street: "Rua da Empresa #{index}",
     address_number: "#{rand(1000..9999)}",

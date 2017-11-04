@@ -12,18 +12,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <%= link_to 'Sobre', root_path(anchor: 'about') %>
-                </li>
-                <li>
-                    <%= link_to 'Serviços', root_path(anchor: 'services') %>
-                </li>
-                <li>
-                    <%= link_to 'Portfolio', root_path(anchor: 'portfolio') %>
-                </li>
-                <li>
-                    <%= link_to 'Contato', root_path(anchor: 'contact') %>
-                </li>
-                <li>
                     <%= link_to 'Empresas', businesses_path %>
                 </li>
                 <% if user_signed_in? %>

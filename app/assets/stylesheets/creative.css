@@ -157,7 +157,7 @@ header {
   background-position: center;
   background-image: asset-url('header.jpg');
   text-align: center;
-  color: white;
+  color: black;
 }
 header .header-content {
   position: relative;
@@ -176,8 +176,8 @@ header .header-content .header-content-inner hr {
   margin: 30px auto;
 }
 header .header-content .header-content-inner p {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+  color: black;
   font-size: 16px;
   margin-bottom: 50px;
 }

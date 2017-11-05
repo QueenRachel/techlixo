@@ -11,6 +11,7 @@ class ContactMailer < ApplicationMailer
     @name = contact.name
     @body = contact.body
     @email = contact.email
+    @photo = contact.photo.url
 
     mail from: @email, to: destino, subject: 'Novo contato de TechLixo.com'
   end

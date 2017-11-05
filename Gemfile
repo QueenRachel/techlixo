@@ -27,6 +27,13 @@ gem 'devise', '~> 4.2.1'
 gem 'devise-i18n'
 # SimpleForm é uma maneira facilitada de criar forms no Rails
 gem 'simple_form'
+# Serve para subir os logotipos na Amazon AWS
+gem 'fog-aws'
+gem 'carrierwave', '~> 1.0'
+# Rails Ajax e Imagens no form não funcionam por padrão
+gem 'remotipart', '~> 1.2'
+# Abrir envio de emails localmente
+gem 'letter_opener'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

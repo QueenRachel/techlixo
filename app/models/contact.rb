@@ -1,5 +1,6 @@
 class Contact
   extend ActiveModel::Naming
+  extend CarrierWave::Mount
   include ActiveModel::Validations
   include ActiveModel::Conversion
 
@@ -14,6 +15,8 @@ class Contact
   # Validar o tamanho das informações de corpo e nome
   validates :name, length: { maximum: 70 }
   validates :body, length: { maximum: 1000 }
+
+  mount_uploader :photo, ContactUploader
 
    def initialize(attributes={})
      attributes && attributes.each do |name, value|

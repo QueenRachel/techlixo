@@ -1,5 +1,5 @@
 <!-- contact é o objeto, contact_path o caminho e remote: true significa que ele enviará um "AJAX" -->
-<%= simple_form_for contact, url: contact_path, remote: true do |f| %>
+<%= simple_form_for contact, url: contact_path, remote: true, multipart: true, authenticity_token: true do |f| %>
   <div class="form-message">
     <p><%= @message if defined?(@message) %></p>
   </div>

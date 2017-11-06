@@ -1,7 +1,17 @@
-<div class="container-fluid" style="margin-top: 40px;">
+<div class="container-fluid" style="margin-top: 80px;">
   <p id="notice"><%= notice %></p>
   <div class="text-center">
     <h1>Lista de Empresas</h1>
+    <hr>
+    <div class="panel mb-60">
+      <%= form_tag(businesses_path, method: :get) do %>
+        <div class="form-group">
+          <%= text_field_tag :term, params[:term], placeholder: 'Busque pela cidade. Exemplo: Taquara', class: 'form-control form-control-lg' %>
+          <br>
+          <%= submit_tag 'Buscar', name: nil, class: 'btn btn-green btn-lg' %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
@@ -9,18 +19,13 @@
     <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
             <% @businesses.each do |business| %>
-              <div class="col-md-4 col-sm-6">
+              <div class="col-md-4 col-sm-6 text-center">
                 <%= link_to business_path(business), target: 'blank', class: 'portfolio-box' do %>
-                  <%= image_tag "portfolio/thumbnails/#{[1,2,3,4,5,6].sample}.jpg", class: 'img-responsive' %>
-                  <div class="portfolio-box-caption">
-                      <div class="portfolio-box-caption-content">
-                          <!-- <div class="project-category text-faded">
-                              Category
-                          </div> -->
-                          <div class="project-name">
-                              <%= business.company_name %>
-                          </div>
-                      </div>
+                  <div class="panel mb-0">
+                    <h2><%= business.fantasy_name %></h2>
+                    Cidade: <%= business.address_city %>
+                    <br>
+                    Estado: <%= business.address_state %>
                   </div>
                 <% end %>
               </div>

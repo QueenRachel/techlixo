@@ -4,7 +4,16 @@
             <h1 id="homeHeading">Techlixo é a principal ponte entre o lixo eletrônico e o descarte ecológico</h1>
             <hr>
             <p>Encontre empresas que realizam o descarte de dejetos eletrônicos.</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Descubra mais</a>
+
+            <div class="panel mb-0">
+              <%= form_tag(businesses_path, method: :get) do %>
+                <div class="form-group">
+                  <%= text_field_tag :term, params[:term], placeholder: 'Busque pela cidade. Exemplo: Taquara', class: 'form-control form-control-lg' %>
+                  <br>
+                  <%= submit_tag 'Buscar', name: nil, class: 'btn btn-green btn-lg' %>
+                </div>
+              <% end %>
+            </div>
         </div>
     </div>
 </header>

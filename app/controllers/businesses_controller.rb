@@ -4,7 +4,11 @@ class BusinessesController < ApplicationController
 
   # GET /businesses
   def index
-    @businesses = Business.all
+    @businesses = if params[:term]
+      Business.where('address_city ILIKE ?', "%#{params[:term]}%")
+    else
+      Business.all
+    end
   end
 
   # GET /my_businesses
@@ -66,7 +70,8 @@ class BusinessesController < ApplicationController
   def business_params
     params.require(:business).permit(:fantasy_name, :cnpj, :email, :telephone,
       :address_street, :address_number, :address_complement, :address_neighborhood,
-      :address_city, :address_state, :address_zipcode, :company_name, :website, :observation
+      :address_city, :address_state, :address_zipcode, :company_name, :website, :observation,
+      :term
     )
   end
 end
